@@ -180,13 +180,14 @@ const ProfilePage = () => {
           backgroundColor: themeMode === 'dark' ? 'rgba(30, 41, 59, 0.8)' : 'rgba(255, 255, 255, 0.8)',
           backdropFilter: 'blur(10px)',
           border: `1px solid ${themeMode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)'}`,
+          color: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.9)',
         }}
       >
         <Box sx={{ mb: 4 }}>
           <Typography variant="h4" fontWeight={600} gutterBottom>
             Profile
           </Typography>
-          <Typography variant="body1" color="text.secondary">
+          <Typography variant="body1" color={themeMode === 'dark' ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)'}>
             Manage your personal information and preferences
           </Typography>
         </Box>
@@ -293,7 +294,7 @@ const ProfilePage = () => {
                           {stat.label}
                         </Typography>
                       </Box>
-                      <Typography variant="body1" fontWeight={600}>
+                      <Typography variant="body1" fontWeight={600} sx={{ color: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.9)' }}>
                         {stat.value}
                       </Typography>
                     </Box>
@@ -313,7 +314,7 @@ const ProfilePage = () => {
                 border: `1px solid ${themeMode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)'}`,
               }}
             >
-              <Typography variant="h6" gutterBottom>
+              <Typography variant="h6" gutterBottom sx={{ color: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.9)' }}>
                 Personal Information
               </Typography>
               <Divider sx={{ mb: 3 }} />
@@ -329,6 +330,19 @@ const ProfilePage = () => {
                     sx={{
                       '& .MuiOutlinedInput-root': {
                         backgroundColor: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.02)',
+                        color: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.9)',
+                      },
+                      '& .MuiInputLabel-root': {
+                        color: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)',
+                      },
+                      '& .MuiOutlinedInput-notchedOutline': {
+                        borderColor: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)',
+                      },
+                      '&:hover .MuiOutlinedInput-notchedOutline': {
+                        borderColor: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)',
+                      },
+                      '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                        borderColor: theme.palette.primary.main,
                       },
                     }}
                   />
@@ -343,6 +357,19 @@ const ProfilePage = () => {
                     sx={{
                       '& .MuiOutlinedInput-root': {
                         backgroundColor: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.02)',
+                        color: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.9)',
+                      },
+                      '& .MuiInputLabel-root': {
+                        color: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)',
+                      },
+                      '& .MuiOutlinedInput-notchedOutline': {
+                        borderColor: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)',
+                      },
+                      '&:hover .MuiOutlinedInput-notchedOutline': {
+                        borderColor: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)',
+                      },
+                      '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                        borderColor: theme.palette.primary.main,
                       },
                     }}
                   />
@@ -362,6 +389,19 @@ const ProfilePage = () => {
                     sx={{
                       '& .MuiOutlinedInput-root': {
                         backgroundColor: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.02)',
+                        color: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.9)',
+                      },
+                      '& .MuiInputLabel-root': {
+                        color: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)',
+                      },
+                      '& .MuiOutlinedInput-notchedOutline': {
+                        borderColor: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)',
+                      },
+                      '&:hover .MuiOutlinedInput-notchedOutline': {
+                        borderColor: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)',
+                      },
+                      '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                        borderColor: theme.palette.primary.main,
                       },
                     }}
                   />
@@ -381,6 +421,19 @@ const ProfilePage = () => {
                     sx={{
                       '& .MuiOutlinedInput-root': {
                         backgroundColor: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.02)',
+                        color: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.9)',
+                      },
+                      '& .MuiInputLabel-root': {
+                        color: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)',
+                      },
+                      '& .MuiOutlinedInput-notchedOutline': {
+                        borderColor: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)',
+                      },
+                      '&:hover .MuiOutlinedInput-notchedOutline': {
+                        borderColor: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)',
+                      },
+                      '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                        borderColor: theme.palette.primary.main,
                       },
                     }}
                   />
@@ -400,6 +453,19 @@ const ProfilePage = () => {
                     sx={{
                       '& .MuiOutlinedInput-root': {
                         backgroundColor: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.02)',
+                        color: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.9)',
+                      },
+                      '& .MuiInputLabel-root': {
+                        color: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)',
+                      },
+                      '& .MuiOutlinedInput-notchedOutline': {
+                        borderColor: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)',
+                      },
+                      '&:hover .MuiOutlinedInput-notchedOutline': {
+                        borderColor: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)',
+                      },
+                      '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                        borderColor: theme.palette.primary.main,
                       },
                     }}
                   />
@@ -416,6 +482,19 @@ const ProfilePage = () => {
                     sx={{
                       '& .MuiOutlinedInput-root': {
                         backgroundColor: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.02)',
+                        color: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.9)',
+                      },
+                      '& .MuiInputLabel-root': {
+                        color: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)',
+                      },
+                      '& .MuiOutlinedInput-notchedOutline': {
+                        borderColor: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)',
+                      },
+                      '&:hover .MuiOutlinedInput-notchedOutline': {
+                        borderColor: themeMode === 'dark' ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)',
+                      },
+                      '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                        borderColor: theme.palette.primary.main,
                       },
                     }}
                   />
